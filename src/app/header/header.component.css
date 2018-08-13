@@ -1,0 +1,42 @@
+header{
+  background-color: transparent;
+  position: scroll;
+  top:0;
+  width: 100%;
+  padding: 20px 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+p.header-logo{
+  display: inline;
+  padding: 10px 30px;
+  margin: 0;
+  color: #000000;
+  letter-spacing: 2px;
+}
+
+mark{
+  background-color: #FFE51F;
+}
+
+nav,ul,li{
+  padding: 0px 15px;
+  margin: 0px;
+  float: right;
+  display: inline;
+}
+
+a.header-nav-menu{
+  text-transform: capitalize;;
+  text-decoration: none;
+  color: #000000;
+}
+
+a.header-nav-menu:hover{
+  text-transform: capitalize;;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #FFE51F;
+}
