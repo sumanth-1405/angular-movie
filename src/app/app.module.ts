@@ -8,6 +8,14 @@ import { BodyComponent } from './body/body.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { MoviecardComponent } from './moviecard/moviecard.component';
+import { CardComponent } from './card/card.component';
+import { DetailsComponent } from './details/details.component';
+import { AddComponent } from './add/add.component';
+import { DeleteComponent } from './delete/delete.component';
+import { SearchmovieComponent } from './searchmovie/searchmovie.component';
+import { SearchComponent } from './search/search.component';
+import { CarddeckComponent } from './carddeck/carddeck.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +24,15 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     FooterComponent,
     BodyComponent,
     HomeComponent,
-    WishlistComponent
+    WishlistComponent,
+    MoviecardComponent,
+    CardComponent,
+    DetailsComponent,
+    AddComponent,
+    DeleteComponent,
+    SearchmovieComponent,
+    SearchComponent,
+    CarddeckComponent
   ],
   imports: [
     BrowserModule,
