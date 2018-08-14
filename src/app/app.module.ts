@@ -15,6 +15,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { SearchmovieComponent } from './searchmovie/searchmovie.component';
 import { SearchComponent } from './search/search.component';
 import { CarddeckComponent } from './carddeck/carddeck.component';
+import { CarddetailsComponent } from './carddetails/carddetails.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CarddeckComponent } from './carddeck/carddeck.component';
     DeleteComponent,
     SearchmovieComponent,
     SearchComponent,
-    CarddeckComponent
+    CarddeckComponent,
+    CarddetailsComponent
   ],
   imports: [
     BrowserModule,
