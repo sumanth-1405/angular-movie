@@ -1,3 +1,10 @@
-<p>
-  card works!
-</p>
+<h3>Card</h3>
+<div class="card">
+  <div>
+    <h4>Title: {{title}}</h4>
+    <p>Rating: {{rating}}</p>
+    <p>Year of Release: {{yearOfRelease}}</p>
+  </div>
+  <app-add *ngIf="location == '/home' "></app-add>
+  <app-delete *ngIf="location == '/wishlist' "></app-delete>
+</div>

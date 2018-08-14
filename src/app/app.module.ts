@@ -8,7 +8,6 @@ import { BodyComponent } from './body/body.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
-import { MoviecardComponent } from './moviecard/moviecard.component';
 import { CardComponent } from './card/card.component';
 import { DetailsComponent } from './details/details.component';
 import { AddComponent } from './add/add.component';
@@ -25,7 +24,6 @@ import { CarddeckComponent } from './carddeck/carddeck.component';
     BodyComponent,
     HomeComponent,
     WishlistComponent,
-    MoviecardComponent,
     CardComponent,
     DetailsComponent,
     AddComponent,
