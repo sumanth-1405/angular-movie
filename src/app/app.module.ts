@@ -39,6 +39,7 @@ import { CarddetailsComponent } from './carddetails/carddetails.component';
     AppRoutingModule
   ],
   providers: [],
+  exports: [SearchComponent, SearchmovieComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

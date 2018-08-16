@@ -1,4 +1,6 @@
-<p>Card Deck</p>
 <div class="card-deck">
-  <app-card></app-card>
+  <app-search *ngIf="location == '/home' " (allMovies)="allMovies($event)"></app-search>
+  <div *ngFor="let movie of movies">
+    <app-card [movie]=movie></app-card>
+  </div>
 </div>

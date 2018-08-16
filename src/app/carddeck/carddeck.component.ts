@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Movie } from '../movie';
 
 @Component({
   selector: 'app-carddeck',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarddeckComponent implements OnInit {
 
-  constructor() { }
+  private location='';
+  private movies = [];
+
+  constructor( private router: Router ) {
+    this.location = router.url;
+  }
 
   ngOnInit() {
+  }
+
+  allMovies(movies){
+    this.movies = movies;
   }
 
 }
