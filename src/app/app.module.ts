@@ -1,45 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { MovieComponent } from './movie/movie.component';
+
+import { MovieService } from './movie.service';
 import { WishlistComponent } from './wishlist/wishlist.component';
-import { CardComponent } from './card/card.component';
-import { DetailsComponent } from './details/details.component';
-import { AddComponent } from './add/add.component';
-import { DeleteComponent } from './delete/delete.component';
-import { SearchmovieComponent } from './searchmovie/searchmovie.component';
-import { SearchComponent } from './search/search.component';
-import { CarddeckComponent } from './carddeck/carddeck.component';
-import { CarddetailsComponent } from './carddetails/carddetails.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'movie/:movieID', component: MovieComponent },
+  { path: 'wishlist/:movieID', component: WishlistComponent },
+  { path: 'wishlist', component: WishlistComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    BodyComponent,
     HomeComponent,
-    WishlistComponent,
-    CardComponent,
-    DetailsComponent,
-    AddComponent,
-    DeleteComponent,
-    SearchmovieComponent,
-    SearchComponent,
-    CarddeckComponent,
-    CarddetailsComponent
+    MovieComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
-  exports: [SearchComponent, SearchmovieComponent],
+  providers: [ MovieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
