@@ -14,7 +14,7 @@ export class MovieService {
   constructor(public http: HttpClient) { }
   private post_url = 'http://localhost:8080/movie/api/v1/save/movie';
   private get_url = 'http://localhost:8080/movie/api/v1/movies';
-  private delete_url = 'http://localhost:8080/api/v1/delete/movie';
+  private delete_url = 'http://localhost:8080/movie/api/v1/delete/movie';
   searchMovie(movie: string) {
     this.movie_string = movie;
     return this.http.get(this.movie_url + 'search/movie?query=' + this.movie_string + '&api_key=' + this.api_key);
@@ -38,20 +38,11 @@ export class MovieService {
   }
 
 
-  addMovie(movie:Movie):Observable<Movie>{
+  addMovie(movie: Movie): Observable<Movie> {
     return this.http.post<Movie>(this.post_url,movie);
   }
-  deleteWishList(id){
+  deleteWishList(id) {
     return this.http.delete(this.delete_url + '/' +id)
     }
 
   }
-// Get popular movies api
-// https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=API_KEY
-// Get upcoming movies api
-// tslint:disable-next-line:max-line-length
-// https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2018-04-15&primary_release_date.lte=2018-07-31&api_key=API_KEY
-// Search movies api
-// https://api.themoviedb.org/3/search/movie?query=SEARCH_STRING&api_key=API_KEY
-// Get movie from api
-// https://api.themoviedb.org/3/movie/ID?api_key=API_KEY
